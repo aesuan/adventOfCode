@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default (async function() {
   try {
     const count = 0;
-    const allCals = await readFile(join(__dirname, 'data.js'), { encoding: 'utf8' });
+    const allCals = await readFile(join(__dirname, 'data.txt'), { encoding: 'utf8' });
     const topThree = allCals.split('\n\n').reduce((topThree, inventory) => {
         const elfCals = inventory.split('\n').reduce((total, item) => {
           return total + Number(item);
